@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedTrack - Smart Medicine Reminder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>MedTrack – Smart Medicine Reminder</h1>
+    <button id="logoutBtn" onclick="logout()">Logout</button>
+</header>
+
+<section id="loginPage">
+    <div class="box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password"><br>
+        <button class="action" onclick="login()">Login</button>
+    </div>
+</section>
+
+<nav id="navbar">
+    <button onclick="showPage('homePage')">Home</button>
+    <button onclick="showPage('aboutPage')">About</button>
+    <button onclick="showPage('servicesPage')">Services</button>
+    <button onclick="showPage('feedbackPage')">Feedback</button>
+</nav>
+
+<section id="homePage">
+    <div class="box">
+        <h2>Welcome ❤</h2>
+        <p id="userText"></p>
+        <p>Never miss your medicine again.</p>
+    </div>
+</section>
+
+<section id="aboutPage">
+    <div class="box">
+        <h2>About MedTrack</h2>
+        <p>
+            MedTrack helps patients, elders and students
+            to take medicines on time using reminders.
+        </p>
+    </div>
+</section>
+
+<!-- ✅ UPDATED SERVICES SECTION -->
+<section id="servicesPage">
+
+    <div class="box">
+        <h2>Common Medicines</h2>
+        <div id="commonMedicineList" class="commonContainer"></div>
+    </div>
+
+    <div class="box">
+        <h2>Add Custom Medicine</h2>
+        <input type="text" id="medName" placeholder="Medicine Name">
+        <input type="text" id="medDose" placeholder="Dosage">
+        <input type="time" id="medTime"><br>
+        <button class="action" onclick="saveMedicine()">Save Medicine</button>
+    </div>
+
+    <div class="box">
+        <h2>Your Medicines</h2>
+        <div id="medicineList"></div>
+    </div>
+
+</section>
+
+<section id="feedbackPage">
+    <div class="box">
+        <h2>User Feedback</h2>
+        <div id="feedbackList"></div>
+    </div>
+
+    <div class="box">
+        <textarea id="feedbackText" placeholder="Write feedback..."></textarea>
+        <button class="action" onclick="addFeedback()">Submit</button>
+    </div>
+</section>
+
+<div id="reminderPopup" class="popup">
+    <div class="popup-content">
+        <h3>⏰ Reminder</h3>
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+<section id="feedbackPage">
+    <div class="box">
+        <h2>User Feedback</h2>
+        <div id="feedbackList"></div>
+    </div>
+
+    <div class="box">
+        <textarea id="feedbackText" placeholder="Write feedback..."></textarea>
+
+        <!-- ✅ SUBMIT BUTTON HERE -->
+        <button class="action" onclick="addFeedback()">Submit</button>
+
+    </div>
+</section>
+
+<audio id="alertSound">
+    <source src="https://actions.google.com/sounds/v1/alarms/digital_watch_alaram_long.oog">
+</audio>
+
+<footer>
+    <p>© 2025 MedTrack</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
