@@ -1,0 +1,8 @@
+{
+  "name": "MedTrack",
+  "description": "Smart Medicine Reminder application to schedule, manage, and receive reminders for medications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

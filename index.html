@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MedTrack - Smart Medicine Reminder</title>
+<meta name="description" content="Smart Medicine Reminder application to schedule, manage, and receive reminders for medications.">
+<meta property="og:title" content="MedTrack - Smart Medicine Reminder">
+<meta property="og:description" content="Smart Medicine Reminder application to schedule, manage, and receive reminders for medications.">
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -43,12 +46,11 @@
         <h2>About MedTrack</h2>
         <p>
             MedTrack helps patients, elders and students
-            to take medicines on time using reminders.
+            to take medicines on time using smart reminders and sound alerts.
         </p>
     </div>
 </section>
 
-<!-- ✅ UPDATED SERVICES SECTION -->
 <section id="servicesPage">
 
     <div class="box">
@@ -59,7 +61,7 @@
     <div class="box">
         <h2>Add Custom Medicine</h2>
         <input type="text" id="medName" placeholder="Medicine Name">
-        <input type="text" id="medDose" placeholder="Dosage">
+        <input type="text" id="medDose" placeholder="Dosage (e.g., 500mg, 1 tablet)">
         <input type="time" id="medTime"><br>
         <button class="action" onclick="saveMedicine()">Save Medicine</button>
     </div>
@@ -79,38 +81,25 @@
 
     <div class="box">
         <textarea id="feedbackText" placeholder="Write feedback..."></textarea>
-        <button class="action" onclick="addFeedback()">Submit</button>
+        <button class="action" onclick="addFeedback()">Submit Feedback</button>
     </div>
 </section>
 
 <div id="reminderPopup" class="popup">
     <div class="popup-content">
-        <h3>⏰ Reminder</h3>
+        <h3>⏰ Medicine Reminder</h3>
         <p id="popupMessage"></p>
-        <button onclick="closePopup()">OK</button>
+        <button onclick="closePopup()">I took it / OK</button>
     </div>
 </div>
-<section id="feedbackPage">
-    <div class="box">
-        <h2>User Feedback</h2>
-        <div id="feedbackList"></div>
-    </div>
 
-    <div class="box">
-        <textarea id="feedbackText" placeholder="Write feedback..."></textarea>
-
-        <!-- ✅ SUBMIT BUTTON HERE -->
-        <button class="action" onclick="addFeedback()">Submit</button>
-
-    </div>
-</section>
-
-<audio id="alertSound">
-    <source src="https://actions.google.com/sounds/v1/alarms/digital_watch_alaram_long.oog">
+<audio id="alertSound" preload="auto">
+    <source src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg" type="audio/ogg">
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
 </audio>
 
 <footer>
-    <p>© 2025 MedTrack</p>
+    <p>© 2025 MedTrack - Smart Medicine Reminder</p>
 </footer>
 
 <script src="script.js"></script>
